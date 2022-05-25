@@ -1,0 +1,8 @@
+camunda:
+  bpm:
+    admin-user:
+      id: admin
+      password: admin
+    job-execution:
+      max-wait: 1000
+      wait-time-in-millis: 1000
