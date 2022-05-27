@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1892w44" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.11.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_1892w44" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.12.0" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.15.0">
   <bpmn:process id="OrderPizzaProcess1" isExecutable="true">
     <bpmn:startEvent id="StartEvent_1">
       <bpmn:outgoing>Flow_0l2wtbm</bpmn:outgoing>
@@ -27,16 +27,16 @@
       <bpmn:incoming>Flow_09syhej</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="Flow_09syhej" sourceRef="ComplainToDeliveryService" targetRef="Event_17vkyr9" />
-    <bpmn:boundaryEvent id="Event_0bsnd3h" name="10s" cancelActivity="false" attachedToRef="WaitForPizza">
+    <bpmn:boundaryEvent id="Event_0bsnd3h" name="45m" cancelActivity="false" attachedToRef="WaitForPizza">
       <bpmn:outgoing>Flow_0ur0azy</bpmn:outgoing>
       <bpmn:timerEventDefinition id="TimerEventDefinition_0rnhfj2">
-        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT10S</bpmn:timeDuration>
+        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT45M</bpmn:timeDuration>
       </bpmn:timerEventDefinition>
     </bpmn:boundaryEvent>
-    <bpmn:boundaryEvent id="Event_1quygwi" name="20s" attachedToRef="WaitForPizza">
+    <bpmn:boundaryEvent id="Event_1quygwi" name="1h" attachedToRef="WaitForPizza">
       <bpmn:outgoing>Flow_017lf7a</bpmn:outgoing>
       <bpmn:timerEventDefinition id="TimerEventDefinition_17rcvi1">
-        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT20S</bpmn:timeDuration>
+        <bpmn:timeDuration xsi:type="bpmn:tFormalExpression">PT1H</bpmn:timeDuration>
       </bpmn:timerEventDefinition>
     </bpmn:boundaryEvent>
     <bpmn:sequenceFlow id="Flow_017lf7a" sourceRef="Event_1quygwi" targetRef="CancelOrder" />
@@ -145,13 +145,13 @@
       <bpmndi:BPMNShape id="Event_1cgkm14_di" bpmnElement="Event_1quygwi">
         <dc:Bounds x="532" y="139" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="561" y="182" width="19" height="14" />
+          <dc:Bounds x="564" y="182" width="13" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_1fjx238_di" bpmnElement="Event_0bsnd3h">
         <dc:Bounds x="482" y="139" width="36" height="36" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="471" y="182" width="19" height="14" />
+          <dc:Bounds x="459" y="182" width="22" height="14" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
